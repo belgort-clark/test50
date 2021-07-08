@@ -4,6 +4,11 @@ check50:
       - run: python3 hello.py
         stdout: Hello, world!
         exit: 0
+      foo:
+      - run: python3 hello.py # run python3 foo.py
+        stdin: baz # insert baz into stdin
+        stdout: baz # expect baz in stdout
+        exit: 0 # expect program to exit with exitcode 0
 submit50:
   checks:
     hello world:
