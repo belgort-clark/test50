@@ -1,6 +1,6 @@
 check50:
   checks:
-    hello world:
+    input baz:
       - run: python3 hello.py
         stdin: baz
         stdout: baz
