@@ -4,6 +4,10 @@ check50:
       - run: python3 hello.py
         stdout: Hello, world!
         exit: 0
+      - run: python3 hello.py
+        stdin: baz
+        stdout: baz
+        exit: 0
 submit50:
   checks:
     hello world:
