@@ -1,13 +1,7 @@
 check50:
-  checks:
-    input baz:
-      - run: python3 hello.py
-        stdin: baz
-        stdout: baz
-        exit: 0
+  files: &check50_files
+    - !exclude "*"
+    - !require hello.py
+
 submit50:
-  checks:
-    hello world:
-      - run: python3 hello.py
-        stdout: Hello, world!
-        exit: 0
+  files: *check50_files
