@@ -10,3 +10,8 @@ def exists():
 def prints_hello():
     """prints "hello, world\\n" """
     check50.run("python3 hello.py").stdout("[Hh]ello, [Ww]orld!?\n", regex=True).exit(0)
+
+@check50.check()
+def id():
+    """hello.py prints what you give it"""
+    check50.run("python3 hello.py").stdin("foo").stdout("foo").stdin("bar").stdout("bar")
